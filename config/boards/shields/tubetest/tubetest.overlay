@@ -2,13 +2,13 @@
 
 / {
     chosen {
-    zmk,kscan = &default_kscan;
+    zmk,kscan = &kscan0;
     zmk,matrix_transform = &default_transform;
     };
 
-    default_kscan: kscan{
+    kscan0: kscan_0 {
         compatiable = "zmk,kscan-gpio-matrix";
-        label = "default_kscan";
+        label = "KSCAN";
         diode-direction = "col2row";
 
         row-gpios = <&blackpill 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
@@ -20,7 +20,7 @@
                     <&blackpill 13 GPIO_ACTIVE_HIGH>;
     };
 
-    default_transform: matrix_transform {
+    default_transform: keymap_transform_0 {
         compatiable = "zmk,matrix-transform";
         rows = <3>;
         columns = <3>;
