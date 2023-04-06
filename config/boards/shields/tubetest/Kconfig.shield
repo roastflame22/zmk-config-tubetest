@@ -1,2 +1,2 @@
 config SHIELD_TUBETEST
-    def_bool $(shield**s**_list_contains,tubetest)
+    def_bool $(shields_list_contains,tubetest)
